@@ -78,8 +78,16 @@ body {
     border: 1px solid #F2F2F2;
     border-radius: 16px;
 }
-.app_card img {
+.app_card_img {
+    overflow: hidden;
     border-radius: 16px;
+}
+.app_card img {
+    transform:scale(1,1);
+    transition: all 1s ease-out;
+}
+.app_card img:hover {
+    transform:scale(1.2,1.2);
 }
 .app_title, .app_model, .app_share{
     padding-left: 32px;
