@@ -59,7 +59,7 @@ img{
     object-fit: cover;
 }
 body {
-    font-family: Noto Sans TC, Arial, serif;
+    font-family: 'Noto Sans TC', Arial, serif;
     color: #020202;
 }
 .container{
@@ -70,13 +70,18 @@ body {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     gap: 24px;
 }
 .app_card {
+    display: flex;
+    flex-direction: column;
     width: 31%;
     border: 1px solid #F2F2F2;
     border-radius: 16px;
+}
+.app_title {
+    flex-grow: 1;
 }
 .app_card_img {
     overflow: hidden;
@@ -84,7 +89,7 @@ body {
 }
 .app_card img {
     transform:scale(1,1);
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
 }
 .app_card img:hover {
     transform:scale(1.2,1.2);
