@@ -1,133 +1,226 @@
-/*css reset*/
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* start*/
-*,*::after,*::after{
-    box-sizing: border-box;
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
 }
-img{
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle; 
-    object-fit: cover;
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  object-fit: cover;
+}
+a {
+  text-decoration: none;
 }
 body {
-    font-family: 'Noto Sans TC', Arial, serif;
-    color: #020202;
+  font-family: "Noto Sans TC", Arial, serif;
+  color: #ffffff;
+  background: #1e1e1e;
 }
-.container{
-    max-width: 1296px;
-    margin: 0 auto;
+header {
+  border-bottom: 1px solid white;
+}
+h1 a img {
+  width: 150px;
+  height: 50px;
+  object-fit: contain;
+}
+header li a {
+  color: #ffffff;
+}
+header li a:hover {
+  border-bottom: 1px solid white;
+}
+.banner {
+  padding-top: 40px;
+  margin-bottom: 160px;
+}
+.banner h2 {
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 120%;
+}
+.banner-btn {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 120%;
+  border: 1px solid white;
+  border-radius: 15px;
+  margin-top: 40px;
+  padding: 12px 40px;
+  margin-bottom: 100px;
+}
+.banner-btn:hover {
+  background-color: #fff;
+  color: #1e1e1e;
+}
+.grass {
+  display: flex;
+  justify-content: flex-end;
+}
+.grass img {
+  width: 180px;
+  height: 180px;
+}
+
+.service-content {
+  margin-bottom: 80px;
+}
+.service-content h3 {
+  font-size: 32px;
+  font-weight: 900;
+}
+.service-content p {
+  font-size: 48px;
+  font-weight: 900;
+}
+.service-com li {
+  border: 1px solid #525252;
+  border-radius: 16px;
+}
+.service-com img {
+  margin-top: 80px;
+  width: 70px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.service-com h5 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 38.4px;
+  margin-bottom: 20px;
+}
+.service-com p {
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 80px;
 }
 .app_com {
-    margin-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 24px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
 }
 .app_card {
-    display: flex;
-    flex-direction: column;
-    width: 31%;
-    border: 1px solid #F2F2F2;
-    border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  border: 1px solid #f2f2f2;
+  border-radius: 16px;
 }
 .app_title {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 .app_card_img {
-    overflow: hidden;
-    border-radius: 16px;
+  overflow: hidden;
+  border-radius: 16px;
 }
 .app_card img {
-    transform:scale(1,1);
-    transition: all 0.5s ease-out;
+  transform: scale(1, 1);
+  transition: all 0.5s ease-out;
 }
 .app_card img:hover {
-    transform:scale(1.2,1.2);
+  transform: scale(1.2, 1.2);
 }
-.app_title, .app_model, .app_share{
-    padding-left: 32px;
-    padding-right: 32px;
+.app_title,
+.app_model,
+.app_share {
+  padding-left: 32px;
+  padding-right: 32px;
 }
-.app_title h5{
-    font-size: 24px;
-    font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 12px;
-    line-height: 24px;
+.app_title h5 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 12px;
+  line-height: 24px;
 }
 .app_title p {
-    font-size: 14px;
-    color: #525252;
-    padding-bottom: 20px;
-    line-height: 21px;
+  font-size: 14px;
+  color: #525252;
+  padding-bottom: 20px;
+  line-height: 21px;
 }
-.app_model , .app_share{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.app_model,
+.app_share {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .app_model h6 {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 24px;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 24px;
 }
 .app_model span {
-    font-size: 16px;
-    line-height: 24px;
+  font-size: 16px;
+  line-height: 24px;
 }
 .line {
-    width: 100%;
-    height:1px;
-    background-color: #F2F2F2;
+  width: 100%;
+  height: 1px;
+  background-color: #f2f2f2;
+}
+
+/* 定义动画 */
+@keyframes text-animation {
+  0% {
+    transform: scale(1); /* 初始尺寸 */
+    opacity: 1; /* 初始透明度 */
+  }
+  50% {
+    transform: scale(1.2); /* 放大尺寸 */
+    opacity: 0.8; /* 降低透明度 */
+  }
+  100% {
+    transform: scale(1); /* 恢复原始尺寸 */
+    opacity: 1; /* 恢复原始透明度 */
+  }
+}
+
+/* 应用动画到悬停状态下的文字 */
+.hover-animation:hover {
+  animation-name: text-animation;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards; /* 动画结束后保持最后一帧状态 */
 }
