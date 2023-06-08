@@ -53,7 +53,7 @@ a {
 body {
   font-family: "Noto Sans TC", Arial, serif;
   color: #ffffff;
-  background: #1e1e1e;
+  background: #1E1E1E;
 }
 header {
   border-bottom: 1px solid white;
@@ -112,7 +112,7 @@ header li a:hover {
   font-size: 48px;
   font-weight: 900;
 }
-.service-com li {
+.service-com li div {
   border: 1px solid #525252;
   border-radius: 16px;
 }
@@ -132,6 +132,73 @@ header li a:hover {
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 80px;
+}
+.service {
+  margin-bottom: 160px;
+}
+.partner h3 {
+  font-weight: 900;
+  font-size: 32px;
+  margin-bottom: 80px;
+}
+.logo-line1, .logo-line2 {
+  position: relative;
+}
+.left-hide {
+  position: absolute;
+  top: 0px;
+  width: 196px;
+  height: 100%;
+  z-index: 50;
+  left: -10px;
+  background: linear-gradient(to right, rgb(30, 30, 30), rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.5));
+}
+.right-hide {
+  position: absolute;
+  top: 0px;
+  width: 196px;
+  height: 100%;
+  z-index: 50;
+  right: -10px;
+  background: linear-gradient(to left, rgb(30, 30, 30),rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.5));
+}
+.partner-logo {
+  margin-bottom: 160px;
+}
+.avatar {
+  border: 1px solid #2e2e2e;
+  border-radius: 16px;
+  padding: 40px;
+  background-color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.avatar .star {
+  margin-bottom: 20px;
+}
+.avatar .content {
+  margin-bottom: 60px;
+  flex-grow: 1;
+}
+.reviewer img {
+  width: 48px;
+  height: 48px;
+}
+.reviewer div {
+  margin-left: 16px;
+}
+.reviewer h6 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+.reviewer p {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+
 }
 .app_com {
   margin-top: 50px;
