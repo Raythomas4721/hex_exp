@@ -53,7 +53,7 @@ a {
 body {
   font-family: "Noto Sans TC", Arial, serif;
   color: #ffffff;
-  background: #1E1E1E;
+  background: #1e1e1e;
 }
 header {
   border-bottom: 1px solid white;
@@ -100,7 +100,9 @@ header li a:hover {
   width: 180px;
   height: 180px;
 }
-
+.banner {
+  margin-bottom: 160px;
+}
 .service-content {
   margin-bottom: 80px;
 }
@@ -131,17 +133,18 @@ header li a:hover {
 .service-com p {
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 80px;
 }
 .service {
   margin-bottom: 160px;
 }
+
 .partner h3 {
   font-weight: 900;
   font-size: 32px;
   margin-bottom: 80px;
 }
-.logo-line1, .logo-line2 {
+.logo-line1,
+.logo-line2 {
   position: relative;
 }
 .left-hide {
@@ -151,7 +154,13 @@ header li a:hover {
   height: 100%;
   z-index: 50;
   left: -10px;
-  background: linear-gradient(to right, rgb(30, 30, 30), rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.5));
+  background: linear-gradient(
+    to right,
+    rgb(30, 30, 30),
+    rgba(30, 30, 30, 0.9),
+    rgba(30, 30, 30, 0.8),
+    rgba(30, 30, 30, 0.5)
+  );
 }
 .right-hide {
   position: absolute;
@@ -160,33 +169,90 @@ header li a:hover {
   height: 100%;
   z-index: 50;
   right: -10px;
-  background: linear-gradient(to left, rgb(30, 30, 30),rgba(30, 30, 30, 0.9), rgba(30, 30, 30, 0.8), rgba(30, 30, 30, 0.5));
+  background: linear-gradient(
+    to left,
+    rgb(30, 30, 30),
+    rgba(30, 30, 30, 0.9),
+    rgba(30, 30, 30, 0.8),
+    rgba(30, 30, 30, 0.5)
+  );
 }
 .partner-logo {
   margin-bottom: 160px;
 }
+swiper-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+}
 .avatar {
+  height: 100%;
   border: 1px solid #2e2e2e;
   border-radius: 16px;
   padding: 40px;
   background-color: #2e2e2e;
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+}
+.avatar-mobile {
+  height: 100%;
+  padding: 20px;
+  background-color: #2e2e2e;
+  display: flex;
+  flex-direction: column;
 }
 .avatar .star {
   margin-bottom: 20px;
 }
+.avatar-mobile .star  {
+  margin-bottom: 20px;
+}
+.avatar-mobile .star img {
+  width: 16px;
+  height: 16px;
+}
+
 .avatar .content {
+  font-size: 16px ;
+  line-height: 24px;
+  font-weight: 400;
   margin-bottom: 60px;
+  flex-grow: 1;
+}
+.avatar-mobile .content {
+  font-size: 16px ;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
   flex-grow: 1;
 }
 .reviewer img {
   width: 48px;
   height: 48px;
 }
-.reviewer div {
-  margin-left: 16px;
+.reviewer .reviewer-info {
+  padding-left: 16px;
 }
 .reviewer h6 {
   font-size: 16px;
@@ -198,21 +264,68 @@ header li a:hover {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+}
+.partner {
+  padding-bottom: 160px;
+}
+/* applications */
+.applications {
+  padding-top: 160px;
+  padding-bottom: 160px;
+  border: 1px solid white;
+  border-radius: 160px;
+  background-color: #fff;
+  color: #000;
+}
+.applications h3 {
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 96px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.app-searchbar {
+  position: relative;
+  margin-bottom: 24px;
+}
+.app-searchbar i {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  color: black;
+}
 
+.app-searchbar input {
+  height: 64px;
+}
+.app-filter-btn button {
+  padding: 20px 40px;
+  border: 1px solid #f2f2f2;
+  border-radius: 16px;
+}
+.app-filter-com button {
+  border: 0px;
+}
+.app-filter-com .active {
+  background-color: #f2f2f2;
+  color: #020202;
+}
+.app-dropdown .dropdown button {
+  padding: 20px 40px;
+  border: 1px solid #f2f2f2;
+  border-radius: 16px;
 }
 .app_com {
   margin-top: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 24px;
 }
 .app_card {
-  display: flex;
-  flex-direction: column;
-  width: 31%;
   border: 1px solid #f2f2f2;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .app_title {
   flex-grow: 1;
@@ -222,6 +335,7 @@ header li a:hover {
   border-radius: 16px;
 }
 .app_card img {
+  width: 100%;
   transform: scale(1, 1);
   transition: all 0.5s ease-out;
 }
@@ -268,7 +382,202 @@ header li a:hover {
   height: 1px;
   background-color: #f2f2f2;
 }
-
+.app_pagination {
+  margin-top: 40px;
+}
+.app_pagination ul li  {
+  width: 48px;
+  height: 48px;
+}
+.app_pagination ul li a {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  color: #020202;
+}
+.app_pagination ul li a:hover {
+  background-color: #020202;
+  border-radius: 16px;
+  color: #fff;
+}
+.app_pagination ul li .active  {
+  background-color: #020202;
+  border-radius: 16px;
+  color: #fff;
+}
+.get-started {
+  margin-bottom: 80px;
+}
+.get-started h4 {
+  margin-top: 160px;
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+.get-started .btn {
+  border-radius: 16px;
+  padding: 20px 40px;
+  font-weight: 900;
+} 
+.get-started i {
+  margin-left: 16px;
+}
+footer {
+  margin-top: 80px;
+}
+footer h3 a {
+  color: #fff;
+  font-weight: 900;
+  font-size: 80px;
+  line-height: 96px;
+}
+.footer_top {
+  margin-bottom: 80px;
+}
+.footer_logo {
+  background: url(./images/logo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 220px;
+  height: 40px;
+  margin-bottom: 80px;
+}
+.footer_bottom {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+/* .footer_bottom p {
+  margin-right: 80px;
+} */
+.footer_function li {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.footer_function li a{
+  color: #fff;
+}
+.footer_function_two  {
+  gap: 20px;
+}
+.footer_function_two  {
+  padding-left: 0;
+  margin-bottom: 32px;
+}
+.footer_function_two li a {
+  color: #fff; 
+}
+.go-Top {
+  color: #fff;
+}
+@media (max-width:767px) {
+  .banner {
+    padding-top: 40px;
+    margin-bottom: 160px;
+  }
+  .banner h2 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 57.6px;
+  }
+  .grass {
+    display: flex;
+    justify-content: center;
+  }
+  .grass img {
+    width: 117px;
+    height: 117px;
+  }
+  .banner {
+    margin-bottom: 120px;
+  }
+  .service-content {
+    margin-bottom: 48px;
+  }
+  .service-content h3 {
+    font-size: 20px;
+    font-weight: 900;
+    padding-bottom: 24px;
+  }
+  .service-content p {
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 38.4px;
+  }
+  .service {
+    margin-bottom: 120px;
+  }
+  .partner h3 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .partner-logo {
+    margin-bottom: 48px;
+  }
+  .left-hide {
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 100%;
+    z-index: 50;
+    left: -10px;
+    background: linear-gradient(
+      to right,
+      rgb(30, 30, 30),
+      rgba(30, 30, 30, 0.9),
+      rgba(30, 30, 30, 0.8),
+      rgba(30, 30, 30, 0.5)
+    );
+  }
+  .right-hide {
+    position: absolute;
+    top: 0px;
+    width: 100px;
+    height: 100%;
+    z-index: 50;
+    right: -10px;
+    background: linear-gradient(
+      to left,
+      rgb(30, 30, 30),
+      rgba(30, 30, 30, 0.9),
+      rgba(30, 30, 30, 0.8),
+      rgba(30, 30, 30, 0.5)
+    );
+  }
+  .applications {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-radius: 20px;
+  }
+  .applications h3 {
+    font-size: 32px;
+    line-height: 38.4px;
+    margin-bottom: 32px;
+  }
+  .get-started {
+    margin-bottom: 160px;
+  }
+  .get-started h4 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 32px;
+    line-height: 38.4px;
+  }
+  .get-started .btn {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .footer_top {
+    flex-direction: column-reverse;
+  }
+  .footer_logo {
+    margin-bottom: 40px;
+  }
+  footer h3 a {
+    font-size: 48px;
+    line-height: 57.6px;
+  }
+}
 /* 定义动画 */
 @keyframes text-animation {
   0% {
